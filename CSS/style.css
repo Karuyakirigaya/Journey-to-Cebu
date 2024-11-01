@@ -1,0 +1,1027 @@
+/* General Body Style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #383838;
+}
+
+/* Hide scroll bar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #A0C334;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+
+
+/* HTML Styling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    padding: 30px 12%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    opacity: 0.95;
+    justify-content: space-between;
+    /* Adjust to center content */
+}
+
+/* Logo */
+.logo {
+    width: 200px;
+    height: auto;
+    margin-right: 2em;
+    display: inline-block;
+}
+
+.logo img {
+    width: 100px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    flex: 1;
+    /* Allow nav to take available space */
+    justify-content: center;
+    /* Center navigation items */
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    gap: 20px;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    color: #A0C334;
+    transition: 0.5s;
+}
+
+/* Menu button */
+.menu-button {
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.menu-button svg {
+    fill: #fff;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    height: 50vh;
+    margin: 40px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.container img.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+
+
+/* Call-to-action button */
+button {
+    padding: 9px 25px;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+    transition: all 0.3s ease 0s;
+    color: white;
+}
+
+button:hover {
+    background-color: #A0C334;
+    color: black;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #383838;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center items horizontally */
+    text-align: center;
+    padding: 20px;
+    /* Add padding for spacing */
+    transition: right 0.3s ease;
+}
+
+.sidebar.show {
+    right: 0;
+}
+
+.sidebar li {
+    margin-bottom: 20px;
+    list-style: none;
+    /* Remove default list styling */
+}
+
+.sidebar li a {
+    color: white;
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.sidebar .close-sidebar svg {
+    cursor: pointer;
+    margin-left: auto;
+    margin-bottom: 20px;
+    /* Space from the bottom */
+}
+
+
+.cta-mobile button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-mobile {
+    display: block;
+    text-align: center;
+}
+
+/* Menu button */
+.menu-button {
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.menu-button svg {
+    fill: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 600px;
+    /* Fixed height for consistency */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* Ensure absolute positioning inside works */
+}
+
+/* Hero Text Styles */
+.hero-text {
+
+    padding: 20px;
+}
+
+.hero-text h1 {
+    color: #A0C334;
+    font-size: 100px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    /* Ensure space between heading and paragraph */
+}
+
+.hero-text p {
+    color: white;
+    font-size: 16px;
+    /* Keep the font size as it is */
+    text-align: left;
+    /* Align text to the left for readability */
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Hero Image Styles */
+.hero-image {
+    margin-left: 20px;
+    max-width: 90%;
+    height: auto;
+}
+
+/* Categories Section */
+.categories-section {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    padding: 40px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.category {
+    text-align: center;
+    width: 30%;
+}
+
+.category-image {
+    width: 100%;
+    height: 500px;
+    background-color: #D3D3D3;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.category-image:hover {
+    transform: scale(1.01);
+}
+
+h3 {
+    color: #A0C334;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* See More Button */
+.see-more-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.see-more-btn:hover {
+    box-shadow: 0 0 0 4px #E5D429;
+    transform: scale(1.1);
+}
+
+/* History Section */
+.history-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 10%;
+    background-color: #383838;
+    box-sizing: border-box;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.history-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.history-text h2 {
+    color: #A0C334;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.history-text p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.history-image {
+    flex: 1;
+    text-align: center;
+}
+
+.history-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #A0C334;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #c7e56f;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #252525;
+    color: #A0C334;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    width: 150px;
+    height: auto;
+}
+
+.footer-categories {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-categories li {
+    display: inline;
+}
+
+.footer-categories a {
+    color: #A0C334;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-categories a:hover {
+    color: #858585;
+}
+
+/*List*/
+.list-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    /* Optional: Add padding or margin if needed */
+    padding: 20px;
+    margin: 0;
+}
+
+.beach-list-section {
+    width: 100%;
+    height: 500px;
+    background-image: url('../images/beach-background-list.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+
+.beach-list-section .hero-text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    /* Optional: Add padding or margin if needed */
+    padding: 20px;
+    margin: 0;
+}
+
+
+.historic-list-section .hero-text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.historic-list-section {
+    width: 100%;
+    height: 500px;
+    /* Adjust height as needed */
+    background-image: url('../images/historic-hero.jpg');
+    background-size: cover;
+    /* Ensure the image covers the entire section */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    text-align: center;
+    display: flex;
+    /* Use flex to center content vertically */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    padding: 50px 0;
+    /* Add padding around the section */
+    box-sizing: border-box;
+    /* Include padding and border in the element’s total width and height */
+}
+
+.activities-list-section .hero-text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.activities-list-section {
+    width: 100%;
+    height: 500px;
+    /* Adjust height as needed */
+    background-image: url('../images/activities-hero.jpg');
+    background-size: cover;
+    /* Ensure the image covers the entire section */
+    background-position: center;
+    /* Center the background image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    text-align: center;
+    display: flex;
+    /* Use flex to center content vertically */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    padding: 50px 0;
+    /* Add padding around the section */
+    box-sizing: border-box;
+    /* Include padding and border in the element’s total width and height */
+}
+
+
+
+
+.list-description {
+    color: white;
+    /* Ensure text is readable against the background */
+    max-width: 800px;
+    /* Limit the width of the text block */
+    padding: 30px;
+    /* Add padding inside the text block for white space */
+    margin: 0 auto;
+    /* Center the text block horizontally */
+    text-align: left;
+}
+
+.list-description h1 {
+    color: #A0C334;
+    font-size: 42px;
+    text-align: center;
+}
+
+.list-description p {
+    color: white;
+}
+
+.beach-list-section {
+    display: block;
+    padding: 20px;
+
+}
+
+.place-info {
+    text-align: center;
+    /* Center text alignment */
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    /* Use flexbox for alignment */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    gap: 20px;
+    /* Space between image and text */
+}
+
+.place-info img {
+    width: 80%;
+    /* Adjust width of the image */
+    height: auto;
+    /* Maintain aspect ratio */
+    max-width: 600px;
+    /* Optional: limit maximum width for larger screens */
+    border-radius: 8px;
+    /* Add border radius for styling */
+}
+
+.place-info h2 {
+    color: #A0C334;
+    font-weight: 500;
+    font-size: 36px;
+    /* Adjust font size */
+    margin: 0;
+    /* Remove default margin */
+}
+
+.place-info p {
+    color: white;
+    font-size: 18px;
+    /* Adjust font size for readability */
+    max-width: 800px;
+    /* Optional: limit maximum width for text block */
+    line-height: 1.6;
+    /* Improve readability */
+    text-align: center;
+    /* Center text alignment */
+}
+/*----------------FAQ PAGE---------------------*/
+.faq-header {
+    display: flex;
+    
+    align-items: center; /* Center children horizontally */
+    text-align: center; /* Center text within the container */
+}
+
+.faq-header h1 {
+    margin: 0;
+    color: white;
+    font-size: 70px;
+}
+
+.faq-header p {
+    margin: 10px 10px; /* Add some margin for spacing */
+    font-size: 20px;
+    color: white;
+}
+
+
+.faq-header img {   
+    width: 50%; /* Ensure the image scales down with the container */
+    height: auto; /* Maintain aspect ratio */
+}
+.faq-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.faq-item {
+    background-color: #282828; /* Dark background for items */
+    color: #FFFFFF;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s;
+}
+
+.faq-item:hover {
+    background-color: #A0C334; /* Change color on hover */
+}
+
+.faq-item h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 18px; /* Font size for questions */
+}
+/* CONTACT PAGE*/
+/* Contact Header Styles */
+.contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #1a1a1a; /* Dark background */
+    color: #FFFFFF;
+    border-bottom: 3px solid #A0C334; /* Green border */
+}
+
+.header-content {
+    max-width: 600px; /* Limit width of text */
+}
+
+.contact-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px; /* Spacing below heading */
+}
+
+.contact-header p {
+    font-size: 18px;
+    line-height: 1.5; /* Line spacing for readability */
+}
+
+.contact-image {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #282828; /* Background for the form */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #A0C334; /* Title color */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #FFFFFF; /* Label color */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    background-color: #444444; /* Input background */
+    color: #FFFFFF; /* Input text color */
+}
+
+.contact-form textarea {
+    background-color: #444444; /* Textarea background */
+    color: #FFFFFF; /* Textarea text color */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #A0C334; /* Button background */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #000000; /* Button hover color */
+}
+
+.privacy-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #252525;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.privacy-section h1 {
+    font-size: 32px;
+    color: #A0C334;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.privacy-section h2 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+    color: #A0C334;
+}
+
+.privacy-section p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: white;
+}
+
+.privacy-section a {
+    color: #A0C334;
+    text-decoration: none;
+}
+
+.privacy-section a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Tourist Spot Page */
+.tourist-spot{
+    padding: 40px 200px; 
+    color: #FFFFFF;
+}
+
+#spot-name {
+    text-align: center;
+    color: #A0C334;
+    font-size: 50px;
+}
+
+#spot-description{
+    text-align: center;
+    color: white;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+}
+.grid-item {
+    
+    padding: 10px;
+}
+#map {
+    height: 400px; /* Height for the map */
+    width: 100%;   /* Full width */
+}
+/* Gallery */
+.image-grid {
+    display: grid; /* Use CSS Grid Layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px; /* Space between images */
+    margin-top: 20px; /* Space above the grid */
+}
+
+.image-grid img {
+    width: 100%; /* Make images responsive */
+    height: 200px; /* Set a fixed height for uniformity */
+    border-radius: 8px; /* Optional: add rounded corners */
+    object-fit: cover; /* Cover the area without stretching */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
+}
+
+.image-grid img:hover {
+    transform: scale(1.3); /* Increase scale for stronger zoom effect */
+    z-index: 1; /* Bring the hovered image above others */
+}
+.recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x1 layout */
+    gap: 25px; /* Increase space between items */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.recommendation-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #282828;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 5px; /* Extra space around each item */
+}
+
+.recommendation-item img {
+    width: 100%;
+    height: 150px; /* Smaller height for images */
+    border-radius: 6px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.recommendation-item h4 {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.recommendation-item button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #A0C334;
+    color: white;
+    cursor: pointer;
+}
+
+.recommendation-item button:hover {
+    background-color: #000000;
+}
+
+
+
+
+
+.view-details-button {
+    margin-left: auto;
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.view-details-button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+/* Optional: Style for the surrounding section */
+.tourist-spot {
+    position: relative; /* Required to position the blurred background */
+    overflow: hidden; /* Prevent overflow */
+}
+
+
+/* Mobile View */
+@media screen and (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .contact-button,
+    .cta {
+        display: none;
+    }   
+    .faq-header img{
+        display:none;
+    }
+
+    .menu-button {
+        display: flex;
+        /* Ensure the menu button is centered or properly positioned */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        background-image: url(/images/cebu-mobile.gif);
+        background-size: cover;
+        /* Ensure background covers the section */
+        background-position: center;
+        /* Center background image */
+        padding: 20px;
+        /* Add some padding for better spacing */
+    }
+
+    .hero-image {
+        display: none;
+        /* Hide hero image on mobile */
+    }
+
+    .hero-text {
+        max-width: 90%;
+        text-align: center;
+        /* Center text in hero section */
+        padding: 0;
+        /* Remove extra padding */
+    }
+
+    .hero-text h1 {
+        font-size: 70px;
+        /* Adjust font size for mobile */
+        margin: 0;
+        /* Remove default margin */
+        color: #A0C334;
+        /* Ensure text color is visible */
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+        /* Add text shadow */
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        /* Adjust font size for mobile */
+        margin: 10px 0;
+        /* Add margin for spacing between elements */
+        color: white;
+        /* Ensure text color is visible */
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+        /* Add text shadow */
+    }
+
+    .categories-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category {
+        width: 100%;
+        /* Ensure categories take full width */
+    }
+
+    .history-item {
+        flex-direction: column;
+    }
+   .tourist-spot{
+        padding:25px;
+   }
+    
+}

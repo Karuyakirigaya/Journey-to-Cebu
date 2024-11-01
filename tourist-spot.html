@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Spot - Journey to Cebu</title>
+    <link href="CSS/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/logo.png" alt="logo">
+        <nav>
+            <ul class="menu-list">
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="#category">Categories</a></li>
+                <li class="hideOnMobile"><a href="faq.html">FAQ</a></li>
+            </ul>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </nav>
+        <li><a class="cta" href="contact.html" alt="contact-button"><button>Contact</button></a></li>
+    </header>
+    <ul class="sidebar">
+        <li class="close-sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
+                <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#category">Categories</a></li>
+        <li><a class="cta-mobile" href="contact.html"><button>Contact</button></a></li>
+    </ul>
+
+    <!-- Dynamic Tourist Spot Section -->
+    <section class="tourist-spot">
+        <h1 id="spot-name"></h1>
+        <div id="spot-description"></div>
+        <div id="spot-details">
+            <h3>Location</h3>
+            <p id="spot-location"></p>
+            <div id="map" style="height: 400px; width: 100%;"></div>
+            <div id="spot-information">
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <h3>Opening Hours</h3>
+                        <ul id="opening-hours"></ul>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Entry Fee</h3>
+                        <p id="entry-fee"></p>
+                    </div>
+                    <div class="grid-item">
+                        <h3>Contact Info</h3>
+                        <p id="contact-info"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div>
+            <h3>Gallery</h3>
+            <div id="image-grid" class="image-grid"></div>
+        </div>
+
+
+        <div id="recommendations">
+            <h3>Recommended Attractions</h3>
+            <div class="recommendation-grid" id="recommended-list"></div>
+        </div>
+
+        <a href="#" class="back-to-top">Back to Top</a>
+
+
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <img src="images/logo.png" alt="logo" class="footer-logo">
+            <ul class="footer-categories">
+                <li><a href="beach_list.html">Beaches</a></li>
+                <li><a href="historical_places_list.html">Historical Places</a></li>
+                <li><a href="activities_list.html">Activities</a></li>
+            </ul>
+            <ul>
+                <li><a href="privacy_policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- The file containing tourist spot data -->
+    <script src="script/script.js"></script>
+    <script src="script/touristData.js"></script>
+    <script src="script/touristSpot.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjs2zYEkHMJ_f8mDq805eHI14iovcZy30&callback=initMap"
+        async defer></script>
+
+</body>
+
+</html>

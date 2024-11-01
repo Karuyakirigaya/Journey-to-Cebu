@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us / Journey to Cebu</title>
+    <link href="CSS/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="CSS/contact.css" rel="stylesheet" type="text/css" media="screen" /> <!-- Link to the separate CSS file -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/logo.png" alt="logo">
+        <nav>
+            <ul class="menu-list">
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="#category">Categories</a></li>
+                <li class="hideOnMobile"><a href="faq.html">FAQ</a></li>
+            </ul>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </nav>
+        <li><a class="cta" href="#" alt="contact-button"><button>Contact</button></a></li>
+    </header>
+    <ul class="sidebar">
+        <li class="close-sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
+                <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="#category">Categories</a></li>
+        <li><a class="cta-mobile" href="#"><button>Contact</button></a></li>
+    </ul>
+    
+    <div class="contact-header">
+        <div class="header-content">
+            <h1>Get in Touch with Us</h1>
+            <p>We’d love to hear from you! Whether you have questions, feedback, or just want to say hello, please reach out.</p>
+        </div>
+        <img class="contact-image" src="images/contact.jpg" alt="Contact Image">
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <a href="#" class="back-to-top">Back to Top</a>
+</body>
+
+<footer>
+    <div class="footer-content">
+        <img src="images/logo.png" alt="logo" class="footer-logo">
+        <ul class="footer-categories">
+            <li><a href="#">Beaches</a></li>
+            <li><a href="#">Historical Places</a></li>
+            <li><a href="#">Activities</a></li>
+        </ul>
+    </div>
+</footer>
+
+</html>
